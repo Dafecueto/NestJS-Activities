@@ -1,3 +1,5 @@
+import { Transform } from "class-transformer";
+import moment from "moment";
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
@@ -8,6 +10,7 @@ export class Activity {
     @Column()
     name: string;
 
+   // @Transform(startDate => moment(startDate).format("DD/MM/YYYY"))
     @Column()
     startDate: Date;
 
@@ -15,7 +18,7 @@ export class Activity {
     endDate: Date;
 
     @Column()
-    priceList: Array<Number>;
+    priceList: number;
 
     @Column()
     payment: string;

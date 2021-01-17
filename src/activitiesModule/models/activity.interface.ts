@@ -3,6 +3,6 @@ export interface Activity {
     name : string,
     startDate : Date,
     endDate : Date,
-    priceList : Array<number>,
+    priceList : number,
     payment : string
 }
